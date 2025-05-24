@@ -1,0 +1,20 @@
+# shared/tls/ca_openssl.cnf
+[ req ]
+prompt = no
+distinguished_name = req_distinguished_name
+x509_extensions = v3_ca # Use this section for v3 extensions
+
+[ req_distinguished_name ]
+C = US
+ST = State
+L = City
+O = YourCA
+OU = Certificate Authority
+CN = My Root CA
+
+[ v3_ca ]
+# Extensions for a CA certificate
+subjectKeyIdentifier = hash
+authorityKeyIdentifier = keyid:always,issuer
+basicConstraints = critical, CA:TRUE, pathlen:0 # THIS IS CRUCIAL: declares it a CA
+keyUsage = critical, digitalSignature, cRLSign, keyCertSign # THIS IS CRUCIAL: allows signing other certs
