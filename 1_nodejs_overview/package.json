@@ -1,0 +1,13 @@
+{
+  "name": "1_nodejs_overview",
+  "version": "1.0.0",
+  "main": "ex_1_3.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
