@@ -6,4 +6,4 @@ const server = http.createServer((req, res) => {
 });
 
 server.maxConnections = 2;
-server.listen(3020, 'localhost');
+server.listen(3020, '127.0.0.1');
